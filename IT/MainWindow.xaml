@@ -53,7 +53,7 @@
                 </EventTrigger>
             </Button.Triggers>
         </Button>
-        <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="41" Height="28" Click="Vissable_pass" Margin="0,129,82,-96">
+        <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="41" Height="28" Click="Update" Margin="0,129,82,-96">
             <Image Source="C:\Users\Олег\source\repos\IT\IT\resource\eye_show_icon_191607.png" />
         </Button>
 
