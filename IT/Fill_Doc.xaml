@@ -1,0 +1,31 @@
+﻿<Window x:Class="IT.Fill_Doc"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="Заполнить документ" Height="450" Width="800">
+    <Grid Background="White"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="1" x:Name="FromWhomTextBox" Text="От кого заявление" Height="30" Margin="5"/>
+        <TextBox Grid.Row="2" x:Name="CtoProshyTextBox" Text="Просьба" Height="30" Margin="5"/>
+        <TextBox Grid.Row="3" x:Name="ObstoetelstvaTextBox" Text="Введите обстоятельства" Height="30" Margin="5"/>
+        <TextBox Grid.Row="4" x:Name="DayTextBox" Text="Введите день" Height="30" Margin="5"/>
+        <TextBox Grid.Row="5" x:Name="YearTextBox" Text="Введите месяц" Height="30" Margin="5"/>
+        <TextBox Grid.Row="7" x:Name="DecryptionTextBox" Text="Введите расшифровку" Height="30" Margin="5"/>
+        <TextBox Grid.Row="8" x:Name="OneTextBox" Text="На что заявление" Height="30" Margin="5"/>
+
+        <Button Grid.Row="9" Content="Сформировать заявление" Click="FillBookmarksButton_Click" Background="#6495ED" Foreground="White" Margin="185,10,158,97"/>
+        <Button Grid.Row="9" Content="Назад" Click="Back_click" Background="#6495ED" Foreground="White" Margin="185,57,158,50"/>
+
+    </Grid>
+</Window>

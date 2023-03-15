@@ -1,0 +1,51 @@
+﻿<Window x:Class="IT.DeleteInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NTTDATA" Height="176.667" Width="400" Background="#FFFAFA">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="239*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="ID" VerticalAlignment="Center" Margin="20,22,0,6"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtID" Margin="10,0,10,17" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="btnDelete_Click" 
+            HorizontalAlignment="Right" Margin="0,33,139,-23" 
+            Background="#6495ED" Foreground="White" 
+            Height="30" Width="100"
+            BorderBrush="Black" BorderThickness="1"
+            FontWeight="Bold" Click="BtnDelete_Click" Content="Удалить">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnDelete_Click" 
+                               Storyboard.TargetProperty="Opacity" 
+                               From="1.0" To="0.7" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnDelete_Click" 
+                               Storyboard.TargetProperty="Opacity" 
+                               From="0.7" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <TextBlock Grid.Row="2" x:Name="txtStatus" VerticalAlignment="Center" HorizontalAlignment="Center" Text="" Grid.Column="2" Margin="42.667,14,196,13"/>
+        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="162" Height="21" 
+                Background="#6495ED" Foreground="White" BorderBrush="Black" BorderThickness="1" FontWeight="Bold" Click="Back_Click" RenderTransformOrigin="3.321,-0.125" Margin="89,68,0,-50" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Удаление записи" Grid.Column="1" HorizontalAlignment="Left" Margin="112,1,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Yu Gothic UI Semibold" Grid.ColumnSpan="2" Grid.Row="2"/>
+    </Grid>
+</Window>

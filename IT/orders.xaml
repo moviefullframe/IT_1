@@ -1,0 +1,126 @@
+﻿<Window x:Class="IT.orders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+
+
+        mc:Ignorable="d"
+        Title="OrderForm" Height="457.627" Width="834.322">
+    <Grid>
+        <DataGrid Name="order_Grid" Margin="62,107,21,50" SelectionChanged="dataGrid_SelectionChanged" ItemsSource="{Binding}"/>
+
+
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10">
+
+        </StackPanel>
+        <Button Content="Удалить" x:Name="btnDelete"  HorizontalAlignment="Right" Margin="0,390,569,9"  Background="#6495ED" Foreground="White"  Width="97" BorderBrush="Black" BorderThickness="1" FontWeight="Bold" Click="btnDelete_Click" RenderTransformOrigin="0.296,0.619">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnDelete" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="1.0" To="0.7" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnDelete" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="0.7" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="719,394,0,0" VerticalAlignment="Top" Width="86" Height="21" 
+            Background="#6495ED" Foreground="White" BorderBrush="Black" BorderThickness="1" FontWeight="Bold" Click="Button_back" RenderTransformOrigin="3.321,-0.125"/>
+        <Button Content="Поиск" x:Name="btnSearch"  HorizontalAlignment="Right" Margin="0,74,667,325"  Background="#6495ED" Foreground="White"  Width="97" BorderBrush="Black" BorderThickness="1" FontWeight="Bold" Click="btnSearch_Click" RenderTransformOrigin="0.296,0.619">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnSearch" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="1.0" To="0.7" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnSearch" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="0.7" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <TextBox x:Name="searchValue" TextChanged="txtSearch_TextChanged" Margin="176,74,43,325"/>
+        <Button Grid.Row="0" Content="Редактировать" x:Name="btnEdit" 
+ HorizontalAlignment="Right" Margin="0,391,672,9" 
+ Background="#6495ED" Foreground="White" Width="103"
+ BorderBrush="Black" BorderThickness="1"
+ FontWeight="Bold" Click="btnEdit_Click" RenderTransformOrigin="0.301,0.498">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.15"/>
+                    <TranslateTransform X="-0.001" Y="0.055"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnEdit" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="1.0" To="0.7" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnEdit" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="0.7" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Content="Добавить" x:Name="btnAdd"  HorizontalAlignment="Right" Margin="0,390,454,9"  Background="#6495ED" Foreground="White"  Width="97" BorderBrush="Black" BorderThickness="1" FontWeight="Bold" Click="btnAdd_Click" RenderTransformOrigin="0.296,0.619">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnAdd" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="1.0" To="0.7" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="btnAdd" 
+                    Storyboard.TargetProperty="Opacity" 
+                    From="0.7" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Label Content="Заказы" HorizontalAlignment="Left" Margin="345,21,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="32" Width="208"/>
+    </Grid>
+</Window>
